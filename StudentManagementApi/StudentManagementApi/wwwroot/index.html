@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Login səhifəsi -->
+    <div id="loginPage" class="page">
+        <div class="card">
+            <h2>Daxil ol</h2>
+            <input type="text" id="loginUsername" placeholder="İstifadəçi adı" />
+            <input type="password" id="loginPassword" placeholder="Şifrə" />
+            <button onclick="login()">Daxil ol</button>
+            <p>Hesabın yoxdur? <span class="link" onclick="showRegister()">Qeydiyyat</span></p>
+        </div>
+    </div>
+
+    <!-- Qeydiyyat səhifəsi -->
+    <div id="registerPage" class="page hidden">
+        <div class="card">
+            <h2>Qeydiyyat</h2>
+            <input type="text" id="regUsername" placeholder="İstifadəçi adı" />
+            <input type="password" id="regPassword" placeholder="Şifrə" />
+            <button onclick="register()">Qeydiyyat ol</button>
+            <p>Hesabın var? <span class="link" onclick="showLogin()">Daxil ol</span></p>
+        </div>
+    </div>
+
+    <!-- Əsas səhifə -->
+    <div id="mainPage" class="page hidden">
+
+        <nav>
+            <span>Student Management</span>
+            <button onclick="logout()">Çıxış</button>
+        </nav>
+
+        <div class="container">
+
+            <!-- Qruplar -->
+            <div class="section">
+                <h3>Qruplar</h3>
+                <div class="form-row">
+                    <input type="text" id="groupName" placeholder="Qrup adı" />
+                    <button onclick="addGroup()">Əlavə et</button>
+                </div>
+                <ul id="groupList"></ul>
+            </div>
+
+            <!-- Tələbələr -->
+            <div class="section">
+                <h3>Tələbələr</h3>
+                <div class="form-row">
+                    <input type="text" id="stuSearch" placeholder="Axtar..." oninput="loadStudents()" />
+                </div>
+                <div class="form-row">
+                    <input type="text" id="stuName" placeholder="Ad Soyad" />
+                    <input type="number" id="stuAge" placeholder="Yaş" />
+                    <input type="email" id="stuEmail" placeholder="Email" />
+                    <select id="stuGroup"></select>
+                    <button onclick="addStudent()">Əlavə et</button>
+                </div>
+                <ul id="studentList"></ul>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
