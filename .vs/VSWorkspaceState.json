@@ -1,0 +1,15 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\StudentManagementApi",
+    "\\StudentManagementApi\\StudentManagementApi",
+    "\\StudentManagementApi\\StudentManagementApi\\Controllers",
+    "\\StudentManagementApi\\StudentManagementApi\\Data",
+    "\\StudentManagementApi\\StudentManagementApi\\DTOs",
+    "\\StudentManagementApi\\StudentManagementApi\\DTOs\\Group",
+    "\\StudentManagementApi\\StudentManagementApi\\DTOs\\Student",
+    "\\StudentManagementApi\\StudentManagementApi\\Models"
+  ],
+  "SelectedNode": "\\StudentManagementApi\\StudentManagementApi\\StudentManagementApi.csproj",
+  "PreviewInSolutionExplorer": false
+}
